@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass =require('gulp-sass');
+const childProcess = require('child_process');
 const browserSync = require('browser-sync').create();
 
 //compile scss into css
@@ -9,16 +10,38 @@ function style() {
         .pipe(sass().on('error',sass.logError)).pipe(gulp.dest('./css')).pipe(browserSync.stream());
 }
 
-function watch() {
+function browserSyncServer(done) {
     browserSync.init({
         server:{
-            baseDir:'./'
+            baseDir:'./_site'
         }
     });
+    done();
+}
+function jekyllBuild() {
+    return childProcess.spawn( 'jekyll.bat', ['build'], {stdio: 'inherit'})
+}
+function browserSyncReload(done) {
+    browserSync.reload();
+    done();
+}
+function watch() {
+
     gulp.watch('./scss/**/*.scss',style);
-    gulp.watch('./*.html').on('change',browserSync.reload);
-    gulp.watch('./js/**/*.js').on('change',browserSync.reload)
+    gulp.watch(
+        [
+            '*.html',
+            '_layouts/*.html',
+            '_pages/*',
+            '_posts/*',
+            '_data/*',
+            '_includes/*'
+        ],
+        gulp.series(jekyllBuild, browserSyncReload));
+
 
 }
-exports.style=style;
-exports.watch = watch;
+// exports.style=style;
+// exports.watch = watch;
+
+gulp.task('default', gulp.parallel(jekyllBuild, browserSyncServer, watch));

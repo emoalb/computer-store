@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>hi</h1>
+<ul>
+{% for post in site.posts %}
+
+<li>
+    <h4 class="title">{{ post.title }}</h4>
+    <div class="car-info">{{ post.date }}</div>
+    <a class="button">I'm interested!</a>
+</li>
+{% endfor %}
+</ul>
 </body>
 </html>
