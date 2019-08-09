@@ -7,7 +7,7 @@ const browserSync = require('browser-sync').create();
 
 function style() {
     return gulp.src('./scss/**/*.scss')
-        .pipe(sass().on('error',sass.logError)).pipe(gulp.dest('./css')).pipe(browserSync.stream());
+        .pipe(sass().on('error',sass.logError)).pipe(gulp.dest('./css')).pipe(gulp.dest('./_site/css')).pipe(browserSync.stream());
 }
 
 function browserSyncServer(done) {
@@ -19,7 +19,7 @@ function browserSyncServer(done) {
     done();
 }
 function jekyllBuild() {
-    return childProcess.spawn( 'jekyll.bat', ['build'], {stdio: 'inherit'})
+  childProcess.spawn( 'jekyll.bat', ['build'], {stdio: 'inherit', shell: true})
 }
 function browserSyncReload(done) {
     browserSync.reload();
@@ -35,7 +35,7 @@ function watch() {
             '_pages/*',
             '_posts/*',
             '_data/*',
-            '_includes/*'
+            '_includes/*',
         ],
         gulp.series(jekyllBuild, browserSyncReload));
 
