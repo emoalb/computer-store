@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass =require('gulp-sass');
+const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const childProcess = require('child_process');
@@ -9,31 +9,38 @@ const browserSync = require('browser-sync').create();
 
 function style() {
     return gulp.src('./scss/**/*.scss')
-        .pipe(sass().on('error',sass.logError)).pipe(postcss([autoprefixer()
+        .pipe(sass().on('error', sass.logError)).pipe(postcss([autoprefixer({
+            overrideBrowserslist:
+                "last 2 version",
+            cascade: false
+        })
         ]))
         .pipe(gulp.dest('./css'))
         .pipe(gulp.dest('./_site/css'))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function browserSyncServer(done) {
     browserSync.init({
-        server:{
+        server: {
             baseDir: '_site'
         }
     });
     done();
 }
+
 function jekyllBuild() {
-return childProcess.spawn( 'jekyll.bat', ['build','--incremental'], {stdio: 'inherit'})
+    return childProcess.spawn('jekyll.bat', ['build', '--incremental'], {stdio: 'inherit'})
 }
+
 function browserSyncReload(done) {
     browserSync.reload();
     done();
 }
+
 function watch() {
 
-    gulp.watch('scss/**/*.scss',style);
+    gulp.watch('scss/**/*.scss', style);
     gulp.watch(
         [
             '*.html',
@@ -43,6 +50,7 @@ function watch() {
         ],
         gulp.series(jekyllBuild, browserSyncReload));
 }
+
 // exports.style=style;
 // exports.watch = watch;
 
