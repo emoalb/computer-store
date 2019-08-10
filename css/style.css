@@ -1,17 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 * {
-  margin: 10px;
+  margin: 0;
   padding: 0; }
 
 html {
-  font: 18px sans-serif;
-  color: #3f3f3f; }
-
-ul li {
-  padding-left: 5px; }
-
-body {
-  background: teal;
-  color: #0086B3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  font: 16px "Roboto", cursive; }
