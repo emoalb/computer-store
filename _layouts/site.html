@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{{site.relative_url}}/css/style.css">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/css/style.css' | prepend: site.baseurl}}">
 </head>
 <body>
 {% include navigation.html %}
