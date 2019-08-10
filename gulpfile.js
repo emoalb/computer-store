@@ -31,7 +31,7 @@ function browserSyncServer(done) {
 }
 
 function jekyllBuild() {
-    return childProcess.spawn('jekyll.bat', ['build', '--incremental'], {stdio: 'inherit'})
+    return childProcess.spawn('jekyll.bat', ['build','--config','_config.yml,_config_dev.yml' ,'--incremental'], {stdio: 'inherit'})
 }
 
 function browserSyncReload(done) {
