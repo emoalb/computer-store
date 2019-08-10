@@ -1,3 +1,3 @@
-#computer-store
+# computer-store
 
-##CSS Advanced exam project
+## CSS Advanced exam project
