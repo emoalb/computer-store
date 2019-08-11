@@ -2,10 +2,10 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const concatCss = require('gulp-concat-css');
 const childProcess = require('child_process');
 const browserSync = require('browser-sync').create();
 
-//compile scss into css
 
 function style() {
     return gulp.src('./scss/**/*.scss')
@@ -14,7 +14,7 @@ function style() {
                 "last 2 version",
             cascade: false
         })
-        ]))
+        ])).pipe(concatCss("style.css"))
         .pipe(gulp.dest('./css'))
         .pipe(gulp.dest('./_site/css'))
         .pipe(browserSync.reload({stream: true}));

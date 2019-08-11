@@ -11,10 +11,10 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2"
+    "gulp-concat-css": "^3.1.0",
+    "gulp-sass": "^4.0.2",
+    "autoprefixer": "^9.6.1",
+    "gulp-postcss": "^8.0.0"
   },
-  "dependencies": {
-    "autoprefixer": "9.6.1",
-    "gulp-postcss": "8.0.0"
-  }
+  "dependencies": {}
 }

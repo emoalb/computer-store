@@ -1,10 +1,28 @@
 
+@import "variables";
 
-$font-size: 16px;
-
-
-html{
-  font: $font-size 'Roboto',cursive;
+html {
+  font: $font-size 'Roboto', cursive;
+  background: #5CDB95;
 
 }
 
+h1 {
+padding: 0 0.5rem 0 0.5rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+nav{
+  ul{
+
+    margin: 0;
+    li{
+      margin: 0;
+      padding: 0;
+      a{
+
+      }
+    }
+  }
+}

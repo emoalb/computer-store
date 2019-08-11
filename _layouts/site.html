@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="{{ '/css/style.css' | prepend: site.baseurl}}">
 </head>
 <body>
+<header>
+{% include top-nav.html %}
 {% include navigation.html %}
+</header>
 <main>
 {{content}}
 </main>

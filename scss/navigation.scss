@@ -1,0 +1,39 @@
+@import "variables";
+
+header {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $nav-background-color;
+
+    ul {
+      display: flex;
+
+      li {
+        margin: 0 0.5rem 0 0.5rem;
+      }
+    }
+
+    color: $nav-text-color;
+  }
+}
+
+#top-nav-left {
+  margin: 0.5rem;
+
+}
+
+#top-nav-right {
+  align-self: flex-end;
+  margin: 0.5rem;
+}
+
+#bottom-nav {
+  ul {
+    margin: 0.5rem auto  0.5rem auto;
+    li{
+      padding: auto;
+    }
+  }
+}
