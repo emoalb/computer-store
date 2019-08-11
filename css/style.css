@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.4.2/css/all.css");
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #05386B;
+  color: #EDF5E1;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+#top-nav-left {
+  margin: 0.5rem;
+}
+
+#top-nav-right {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0.5rem;
+}
+
+#bottom-nav ul {
+  margin: 0.5rem auto  0.5rem auto;
+}
+
+#bottom-nav ul li {
+  padding: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #EDF5E1;
+}
+
+a :visited {
+  cursor: default;
+  color: #EDF5E1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #EDF5E1;
+}
+
+a :visited {
+  cursor: default;
+  color: #EDF5E1;
+}
+
+html {
+  font: 16px "Roboto", cursive;
+  background: #5CDB95;
+}
+
+h1 {
+  padding: 0 0.5rem 0 0.5rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+nav ul {
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #05386B;
+  color: #EDF5E1;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+#top-nav-left {
+  margin: 0.5rem;
+}
+
+#top-nav-right {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0.5rem;
+}
+
+#bottom-nav ul {
+  margin: 0.5rem auto  0.5rem auto;
+}
+
+#bottom-nav ul li {
+  padding: auto;
+}
+html {
+  font: 16px "Roboto", cursive;
+  background: #5CDB95;
+}
+
+h1 {
+  padding: 0 0.5rem 0 0.5rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+nav ul {
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
+}
