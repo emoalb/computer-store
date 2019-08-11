@@ -1,0 +1,14 @@
+
+@media all and (max-width: 600px){
+#top-nav {
+  ul
+  {
+  li:nth-child(3){
+    font-size: 0;
+  }
+  i:nth-child(1){
+    font-size: initial;
+  }
+  }
+}
+}
