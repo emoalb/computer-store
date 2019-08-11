@@ -33,7 +33,18 @@ header {
   ul {
     margin: 0.5rem auto  0.5rem auto;
     li{
-      padding: auto;
+      padding: 0.5rem;
+border-radius: 0.1rem;
+      transition: transform 0.5s;
+    }
+    li:hover{
+      background-color: $nav-hover-link;
+      color: #05386B;
+      cursor: pointer;
+      transform: scale(1.5);
+      a{
+        color: $nav-background-color
+      }
     }
   }
 }
