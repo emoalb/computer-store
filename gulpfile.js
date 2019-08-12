@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer');
 const concatCss = require('gulp-concat-css');
 const childProcess = require('child_process');
 const browserSync = require('browser-sync').create();
-
+const concat = require('gulp-concat');
 
 function style() {
     return gulp.src('./scss/**/*.scss')
@@ -18,6 +18,12 @@ function style() {
         .pipe(gulp.dest('./css'))
         .pipe(gulp.dest('./_site/css'))
         .pipe(browserSync.reload({stream: true}));
+}
+
+function js() {
+    return gulp.src('./js/*.js', {sourcemaps: false})
+        .pipe(concat('app.min.js'))
+        .pipe(gulp.dest('./_site/js', {sourcemaps: false}));
 }
 
 function browserSyncServer(done) {
@@ -44,12 +50,14 @@ function browserSyncReload(done) {
 function watch() {
 
     gulp.watch('scss/**/*.scss', style);
+    gulp.watch('js/**/*.js',js);
     gulp.watch(
         [
             '*.html',
             '_layouts/*',
             '_posts/*',
-            '_includes/*'
+            '_includes/*',
+            'images/**/*'
         ],
         gulp.series(jekyllBuild, browserSyncReload));
 }

@@ -7,11 +7,21 @@ html {
 
 }
 
-h1 {
-padding: 0 0.5rem 0 0.5rem;
+
+h1, h2, h3, h4, h5, h6 {
+  font: 1rem/1.2 Georgia, serif;
   margin: 0;
-  font-size: 1rem;
+  padding: 0.2rem;
+  cursor: context-menu;
 }
+
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1.0rem; }
+h6 { font-size: 0.8rem; }
 
 nav{
   ul{

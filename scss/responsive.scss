@@ -1,18 +1,53 @@
 @import "variables";
-@media all and (max-width: 600px){
-html {
-  font-size: $font-size-medium;
-}
+
+@media all and (max-width: 600px) {
+  html {
+    font-size: $font-size-medium;
+  }
+
+  #bottom-nav {
+    ul {
+
+
+      li {
+        transition: none;
+        &:hover {
+        transform: none;
+        }
+
+      }
+    }
+
+      }
+  #shop-section{
+  align-items: center;
+  }
+  .grid {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 90%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  .grid-content {
+    justify-self: center;
+    margin: auto;
+  }
   #top-nav {
 
-  ul
-  {
-  li:nth-child(3){
-    font-size: 0;
+    .responsive-menu {
+      display: none;
+    }
   }
-  i:nth-child(1){
-    font-size: initial;
+  #bottom-nav {
+    ul {
+      li {
+        &:not(:last-child) {
+          display: none;
+        }
+      }
+    }
   }
-  }
-}
+
 }

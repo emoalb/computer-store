@@ -1,0 +1,24 @@
+#shop-section{
+
+
+
+
+}
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  grid-gap: 0.5rem;
+
+.info{
+  img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+}
+.grid-content
+{
+  width: 33%;
+}

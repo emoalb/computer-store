@@ -1,0 +1,20 @@
+---
+layout: site
+title: Shop
+permalink: /deals/
+---
+<section id="shop-section">
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div class="grid">
+        {% for post in site.posts %}
+
+
+        <div class="grid-content">
+            <h4 class="title">{{ post.title }}</h4>
+            <div class="info">{{ post.content }}</div>
+        </div>
+
+        {% endfor %}
+    </div>
+</section>
