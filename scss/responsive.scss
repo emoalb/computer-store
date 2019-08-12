@@ -1,6 +1,10 @@
-
+@import "variables";
 @media all and (max-width: 600px){
-#top-nav {
+html {
+  font-size: $font-size-medium;
+}
+  #top-nav {
+
   ul
   {
   li:nth-child(3){

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.4.2/css/all.css");
 
 header nav {
@@ -26,7 +26,7 @@ header nav ul li {
   margin: 0 0.5rem 0 0.5rem;
 }
 
-header nav ul li :hover {
+header nav ul li:hover {
   cursor: pointer;
 }
 
@@ -41,7 +41,7 @@ header nav ul li :hover {
 }
 
 #bottom-nav ul {
-  margin: 0.5rem auto  0.5rem auto;
+  margin: 0.5rem auto 0.5rem auto;
 }
 
 #bottom-nav ul li {
@@ -64,6 +64,24 @@ header nav ul li :hover {
 #bottom-nav ul li:hover a {
   color: #05386B;
 }
+
+#language-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #05386B;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#language-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#language-dropdown:hover > #language-dropdown-content {
+  display: block;
+}
 * {
   margin: 0;
   padding: 0;
@@ -83,6 +101,10 @@ a :visited {
   color: #EDF5E1;
 }
 @media all and (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
   #top-nav ul li:nth-child(3) {
     font-size: 0;
   }
@@ -93,7 +115,7 @@ a :visited {
 }
 
 html {
-  font: 16px "Roboto", cursive;
+  font: 20px "Titillium Web", cursive;
   background: #5CDB95;
 }
 
