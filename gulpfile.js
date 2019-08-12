@@ -50,14 +50,15 @@ function browserSyncReload(done) {
 function watch() {
 
     gulp.watch('scss/**/*.scss', style);
-    gulp.watch('js/**/*.js',js);
+
     gulp.watch(
         [
             '*.html',
             '_layouts/*',
             '_posts/*',
             '_includes/*',
-            'images/**/*'
+            'images/**/*',
+            'js/**/*'
         ],
         gulp.series(jekyllBuild, browserSyncReload));
 }

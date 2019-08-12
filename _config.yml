@@ -35,6 +35,8 @@ plugins:
 
 future: true
 
+include:
+  - images
 exclude:
   - package.json
   - node_modules
