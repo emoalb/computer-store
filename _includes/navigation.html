@@ -1,13 +1,16 @@
 <nav id="bottom-nav">
-    <ul>
-        <li><a href="{{site.baseurl}}/">Home</a></li>
-        <li><a href="{{site.baseurl}}/deals/">Deals</a></li>
-        <li>Computer components</li>
-        <li>Prebuilt Pcs</li>
-        <li>News</li>
-        <li><a href="{{site.baseurl}}/contacts/">Contacts</a></li>
-       <li> <a href="javascript:void(0);" class="icon" onclick="responsive()">
-            <i class="fa fa-bars"></i>
-        </a></li>
+    <label id="responsive-menu-bottom-icon" for="responsive-menu-bottom-check">
+        <i class="fa fa-bars"></i>
+    </label>
+    <input type="checkbox" id="responsive-menu-bottom-check" role="button">
+    <ul id="bottom-nav-list" class="navigation">
+
+
+        <li id="nav-item"><a href="{{site.baseurl}}/">Home</a></li>
+        <li class="nav-item"><a href="{{site.baseurl}}/deals/">Deals</a></li>
+        <li class="nav-item">Computer components</li>
+        <li class="nav-item">Prebuilt Pcs</li>
+        <li class="nav-item">News</li>
+        <li class="nav-item"><a href="{{site.baseurl}}/contacts/">Contacts</a></li>
     </ul>
 </nav>

@@ -30,13 +30,12 @@ github_username:  emoalb
 markdown: kramdown
 
 
+future: true
+
 plugins:
   - jekyll-feed
 
-future: true
 
-include:
-  - images
 exclude:
   - package.json
   - node_modules

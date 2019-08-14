@@ -1,5 +1,5 @@
 @import "variables";
-
+@import "animations";
 @media all and (max-width: 600px) {
   html {
     font-size: $font-size-medium;
@@ -11,16 +11,17 @@
 
       li {
         transition: none;
+
         &:hover {
-        transform: none;
+          transform: none;
         }
 
       }
     }
 
-      }
-  #shop-section{
-  align-items: center;
+  }
+  #shop-section {
+    align-items: center;
   }
   .grid {
     width: 95%;
@@ -35,19 +36,42 @@
     margin: auto;
   }
   #top-nav {
-
     .responsive-menu {
       display: none;
     }
   }
-  #bottom-nav {
-    ul {
-      li {
-        &:not(:last-child) {
-          display: none;
-        }
-      }
+#bottom-nav{
+  display: flex;
+  flex-direction: column;
+
+}
+#bottom-nav-list{
+  display: none;
+}
+  #responsive-menu-bottom-icon {
+    display: block;
+    align-self: center;
+    margin: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    &:hover{
+      cursor: pointer;
+      background-color: #379683;
+
     }
   }
 
+
+  #responsive-menu-bottom-check:checked ~ #bottom-nav-list {
+    display: inline;
+    animation-name: fadein;
+    animation-duration: 2s;
+  }
+
+
 }
+
+
+
+
+

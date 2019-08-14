@@ -94,32 +94,6 @@ header nav ul li:hover {
   margin: 0.5rem;
 }
 
-#bottom-nav ul {
-  margin: 0.5rem auto 0.5rem auto;
-}
-
-#bottom-nav ul li {
-  padding: 0.5rem;
-  border-radius: 0.1rem;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-#bottom-nav ul li:hover {
-  background-color: #379683;
-  color: #05386B;
-  cursor: pointer;
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
-
-#bottom-nav ul li:hover a {
-  text-align: center;
-  color: #05386B;
-}
-
 #language-dropdown-content {
   display: none;
   opacity: 0;
@@ -136,11 +110,45 @@ header nav ul li:hover {
 
 #language-dropdown {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 
 #language-dropdown:hover > #language-dropdown-content {
   display: block;
+}
+
+#bottom-nav ul {
+  margin: 0.5rem auto 0.5rem auto;
+}
+
+#bottom-nav ul li {
+  padding: 0.5rem;
+  border-radius: 0.1rem;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  text-align: center;
+}
+
+#bottom-nav ul li:hover {
+  background-color: #379683;
+  color: #05386B;
+  cursor: pointer;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+#bottom-nav ul li:hover a {
+  color: #05386B;
+}
+
+#responsive-menu-bottom-check {
+  display: none;
+}
+
+#responsive-menu-bottom-icon {
+  display: none;
 }
 * {
   margin: 0;
@@ -160,6 +168,26 @@ a :visited {
   cursor: default;
   color: #EDF5E1;
 }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @media all and (max-width: 600px) {
   html {
     font-size: 1.5vw;
@@ -201,8 +229,40 @@ a :visited {
     display: none;
   }
 
-  #bottom-nav ul li:not(:last-child) {
+  #bottom-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  #bottom-nav-list {
     display: none;
+  }
+
+  #responsive-menu-bottom-icon {
+    display: block;
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+  }
+
+  #responsive-menu-bottom-icon:hover {
+    cursor: pointer;
+    background-color: #379683;
+  }
+
+  #responsive-menu-bottom-check:checked ~ #bottom-nav-list {
+    display: inline;
+    -webkit-animation-name: fadein;
+    animation-name: fadein;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
   }
 }
 
@@ -221,6 +281,7 @@ h6 {
   margin: 0;
   padding: 0.2rem;
   cursor: context-menu;
+  text-align: center;
 }
 
 h1 {
