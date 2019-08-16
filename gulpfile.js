@@ -65,4 +65,4 @@ function watch() {
         gulp.series(jekyllClean,jekyllBuild, browserSyncReload));
 }
 
-gulp.task('default', gulp.parallel(jekyllBuild, browserSyncServer, watch));
+gulp.task('default', gulp.parallel(jekyllClean,jekyllBuild, browserSyncServer, watch));

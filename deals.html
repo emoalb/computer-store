@@ -10,10 +10,12 @@ permalink: /deals/
         {% for post in site.posts %}
 
 
-        <div class="grid-content">
+        <article class="grid-content">
             <h4 class="title">{{ post.title }}</h4>
-            <div class="info">{{ post.content }}</div>
-        </div>
+            <div class="article-content">
+            {{ post.content }}
+            </div>
+        </article>
 
         {% endfor %}
     </div>

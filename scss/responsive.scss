@@ -71,7 +71,12 @@
 
 }
 
+@media all and (min-width:601px) and (max-width:900px) {
 
+ .grid{
+   grid-template-columns: auto auto;
+ }
+}
 
 
 

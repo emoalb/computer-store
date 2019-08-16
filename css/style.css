@@ -22,7 +22,11 @@
 .grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 0.5rem;
+  grid-gap: 1rem;
+  justify-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .grid .info img {
@@ -33,7 +37,17 @@
 }
 
 .grid-content {
-  width: 33%;
+  width: 100%;
+}
+
+article {
+  border: #006b2f 2px solid;
+  border-radius: 0.2rem;
+}
+
+article img {
+  width: 100%;
+  border-radius: 1rem;
 }
 @-webkit-keyframes fadein {
   from {
@@ -266,6 +280,25 @@ a :visited {
   }
 }
 
+@media all and (min-width: 601px) and (max-width: 900px) {
+  .grid {
+    grid-template-columns: auto auto;
+  }
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+footer {
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
 html {
   font: 18px "Titillium Web", cursive;
   background: #5CDB95;
