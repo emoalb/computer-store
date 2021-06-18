@@ -15,7 +15,6 @@
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2"
-  },
-  "dependencies": {}
+    "gulp-sass": "^4.1.0"
+  }
 }
