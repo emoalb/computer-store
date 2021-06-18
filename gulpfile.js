@@ -40,7 +40,7 @@ function jekyllClean() {
 
 function jekyllBuild() {
     return childProcess.spawn('jekyll.bat',
-        [ 'build', '--config', '_config.yml,_config_dev.yml', '--incremental'],
+        [ 'build', '--config', '_config.yml', '--incremental'],
         {stdio: 'inherit'})
 }
 
