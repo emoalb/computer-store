@@ -1,34 +1,31 @@
-#shop-section{
+#shop-section {
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem;
+    justify-items: center;
+    justify-content: space-evenly;
 
-
-
-
-}
-.grid{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 1rem;
-  justify-items: center;
-  justify-content: space-evenly;
-
-.info{
-  img{
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+    .info {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
   }
-}
-}
-.grid-content
-{
-  width: 100%;
-}
-article
-{
-  border: #006b2f 2px solid;
-  border-radius: 0.2rem;
-  img {
+
+  .grid-content {
     width: 100%;
-    border-radius: 1rem;
+  }
+
+  article {
+    border: #006b2f 2px solid;
+    border-radius: 0.2rem;
+
+    img {
+      width: 100%;
+      border-radius: 1rem;
+    }
   }
 }

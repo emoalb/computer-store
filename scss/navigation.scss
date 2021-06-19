@@ -27,6 +27,26 @@ header {
 
 #top-nav-left {
   margin: 0.5rem;
+  li {
+    padding: 0.5rem;
+    border-radius: 0.1rem;
+    transition: transform 0.5s;
+
+    &:hover {
+      background-color: $nav-hover-link;
+      color: #05386B;
+      cursor: pointer;
+      transform: scale(1.5);
+
+      a {
+        color: $nav-background-color
+      }
+
+    }
+
+    text-align: center;
+
+  }
 
 }
 

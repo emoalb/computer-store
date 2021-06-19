@@ -1,10 +1,13 @@
  const gulp = require('gulp');
 const sass = require('gulp-sass');
+ const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const concatCss = require('gulp-concat-css');
-const childProcess = require('child_process');
+//const childProcess = require('child_process');
 const browserSync = require('browser-sync').create();
+//const spawn = require('cross-spawn');
+ const {exec} = require('child_process');
 
 
 function style() {
@@ -34,18 +37,15 @@ function browserSyncServer(done) {
 }
 
 function jekyllClean() {
-    return childProcess.spawn('jekyll.bat',['clean'],
-        {stdio: 'inherit'})
+    return ()=>exec('npm run clean')
 }
 
 function jekyllBuild() {
-    return childProcess.spawn('jekyll.bat',
-        [ 'build', '--config', '_config.yml', '--incremental'],
-        {stdio: 'inherit'})
+    return ()=>exec('npm run build')
 }
 
 function browserSyncReload(done) {
-    browserSync.reload();
+    browserSync.reload()
     done();
 }
 
