@@ -1,7 +1,8 @@
-#shop-section {
+#free-time-section {
   .grid {
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-auto-rows: 20% 40% 40%;
     grid-gap: 1rem;
     justify-items: center;
     justify-content: space-evenly;
@@ -22,7 +23,7 @@
   article {
     border: #006b2f 2px solid;
     border-radius: 0.2rem;
-
+height: 20%;
     img {
       width: 100%;
       border-radius: 1rem;

@@ -6,5 +6,7 @@ body{
   flex-direction: column;
 }
 footer{
+  display: flex;
 flex-shrink: 1;
+ justify-content: center;
 }

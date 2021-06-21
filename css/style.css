@@ -19,9 +19,10 @@
     opacity: 1;
   }
 }
-#shop-section .grid {
+#free-time-section .grid {
   display: grid;
   grid-template-columns: auto auto auto;
+  grid-auto-rows: 20% 40% 40%;
   grid-gap: 1rem;
   justify-items: center;
   -webkit-box-pack: space-evenly;
@@ -29,25 +30,34 @@
   justify-content: space-evenly;
 }
 
-#shop-section .grid .info img {
+#free-time-section .grid .info img {
   width: 100%;
   height: auto;
   -o-object-fit: contain;
   object-fit: contain;
 }
 
-#shop-section .grid-content {
+#free-time-section .grid-content {
   width: 100%;
 }
 
-#shop-section article {
+#free-time-section article {
   border: #006b2f 2px solid;
   border-radius: 0.2rem;
+  height: 20%;
 }
 
-#shop-section article img {
+#free-time-section article img {
   width: 100%;
   border-radius: 1rem;
+}
+#personal-photo {
+  margin: 3px;
+  max-width: 50%;
+  height: auto;
+  border-radius: 10%;
+  padding: 3px;
+  border: black 1px solid;
 }
 @-webkit-keyframes fadein {
   from {
@@ -318,8 +328,14 @@ body {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 html {
   font: 18px "Titillium Web", cursive;
@@ -340,7 +356,7 @@ h6 {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 h2 {

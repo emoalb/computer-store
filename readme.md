@@ -1,3 +1,3 @@
-# Computer-store
+# Personal website
 
-## CSS Advanced exam project
+## 2021
